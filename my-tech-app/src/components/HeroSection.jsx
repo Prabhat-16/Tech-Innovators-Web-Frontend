@@ -23,7 +23,7 @@ export function HeroSection() {
                from-cyan-200 to-sky-500 
               from-violet-50 to-fuchsia-400
               */}
-              <h1 className="text-4xl lg:text-6xl tracking-tight bg-gradient-to-r from-violet-50 to-fuchsia-400  bg-clip-text text-transparent">
+              <h1 className="text-4xl lg:text-6xl tracking-tight bg-gradient-to-r from-cyan-200 to-sky-500  bg-clip-text text-transparent">
                 {env.APP_NAME}
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">

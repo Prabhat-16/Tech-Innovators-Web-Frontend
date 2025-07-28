@@ -7,8 +7,9 @@ import { Footer } from "./components/Footer.jsx";
 import { ThemeTest } from "./components/ThemeTest.jsx";
 
 export default function App() {
+  // Always apply the blue-cyan theme class to the root div
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col theme-blue-cyan">
       <Navigation />
       <main className="flex-1">
         <HeroSection />
