@@ -3,7 +3,7 @@ import { ThemeToggle } from "./ThemeToggle.jsx";
 import { ThemeSliderAdvanced } from "./ThemeSliderAdvanced.jsx";
 import logoImage from "@/assets/logo.png"; // Correct path to your local logo
 
-export function Navigation() {
+export function Navigation({ currentPage, onPageChange }) {
   return (
     <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,19 +19,39 @@ export function Navigation() {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'home' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('home')}
+              >
                 Home
               </Button>
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'about' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('about')}
+              >
                 About
               </Button>
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'members' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('members')}
+              >
                 Members
               </Button>
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'events' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('events')}
+              >
                 Upcoming Events
               </Button>
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'contact' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('contact')}
+              >
                 Contact Us
               </Button>
             </div>

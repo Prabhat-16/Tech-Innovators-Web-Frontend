@@ -7,11 +7,11 @@ export function MissionSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20 mb-4">
+          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20 mb-4 font-poppins">
             Our Purpose
           </div>
-          <h2 className="text-3xl lg:text-4xl text-primary">Our Mission</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl text-primary font-poppins font-bold">Our Mission</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             To empower MIT students with the tools, knowledge, and community needed to drive technological innovation and create solutions that shape the future.
           </p>
         </div>
@@ -22,8 +22,8 @@ export function MissionSection() {
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary/20 to-accent/30 rounded-full flex items-center justify-center">
                 <Lightbulb className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl text-primary">Innovation</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl text-primary font-poppins font-semibold">Innovation</h3>
+              <p className="text-muted-foreground font-poppins">
                 We foster creative thinking and encourage breakthrough ideas that push the boundaries of technology.
               </p>
             </CardContent>
