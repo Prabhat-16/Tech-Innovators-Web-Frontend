@@ -33,11 +33,11 @@ export function GallerySection() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent-foreground/5"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20 mb-4">
+          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20 mb-4 font-poppins">
             Gallery
           </div>
-          <h2 className="text-3xl lg:text-4xl text-primary">Club Activities</h2>
-          <p className="text-xl text-muted-foreground">
+          <h2 className="text-3xl lg:text-4xl text-primary font-poppins font-bold">Club Activities</h2>
+          <p className="text-xl text-muted-foreground font-poppins">
             Get a glimpse of our innovative projects, workshops, and community events
           </p>
         </div>

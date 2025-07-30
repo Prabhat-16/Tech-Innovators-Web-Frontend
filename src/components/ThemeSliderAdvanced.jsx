@@ -62,7 +62,8 @@ const themes = [
 
 export function ThemeSliderAdvanced() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState(0);
+  // Set default theme index to 1 (Blue Cyan)
+  const [currentTheme, setCurrentTheme] = useState(1);
 
   useEffect(() => {
     // Load saved theme
@@ -74,8 +75,9 @@ export function ThemeSliderAdvanced() {
         applyTheme(savedTheme);
       }
     } else {
-      // Apply default theme
-      applyTheme(themes[0].value);
+      // Apply default theme (Blue Cyan)
+      setCurrentTheme(1);
+      applyTheme(themes[1].value);
     }
   }, []);
 

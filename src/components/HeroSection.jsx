@@ -1,10 +1,12 @@
 import { Button } from "./ui/button";
 import { env } from "@/lib/env";
 import logoImage from "@/assets/logo.png"; // Correct path to your local logo
+import { PageTransition } from './PageTransition';
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-primary/5 via-accent/10 to-primary/10 py-20 lg:py-32 overflow-hidden">
+    <PageTransition>
+      <section className="relative bg-gradient-to-br from-primary/5 via-accent/10 to-primary/10 py-20 lg:py-32 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -15,7 +17,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20">
+              <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm text-primary border border-primary/20 font-poppins">
                 🚀 Innovation • Technology • Community
               </div>
 
@@ -23,10 +25,10 @@ export function HeroSection() {
                from-cyan-200 to-sky-500 
               from-violet-50 to-fuchsia-400
               */}
-              <h1 className="text-4xl lg:text-6xl tracking-tight bg-gradient-to-r from-cyan-200 to-sky-500  bg-clip-text text-transparent">
+              <h1 className="text-4xl lg:text-6xl tracking-tight bg-gradient-to-r from-cyan-200 to-sky-500 bg-clip-text text-transparent font-poppins font-bold">
                 {env.APP_NAME}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-lg">
+              <p className="text-xl text-muted-foreground max-w-lg font-poppins">
                 Fostering innovation, creativity, and technological excellence among MIT students through collaborative projects and cutting-edge research.
               </p>
             </div>
@@ -52,5 +54,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    </PageTransition>
   );
 }
