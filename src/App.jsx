@@ -1,5 +1,4 @@
-// src/App.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigation } from "./components/Navigation.jsx";
 import { HeroSection } from "./components/HeroSection.jsx";
 import { MissionSection } from "./components/MissionSection.jsx";
@@ -7,9 +6,17 @@ import { GallerySection } from "./components/GallerySection.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { MembersPage } from "./components/MembersPage.jsx";
 import { EventsPage } from "./components/EventsPage.jsx";
-
+import { ContactPage }from "./components/ContactPage.jsx";
+import { AboutPage } from "./components/AboutPage.jsx";
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem('currentPage') || 'home';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
 
   // Always apply the blue-cyan theme class to the root div
   return (
@@ -26,6 +33,10 @@ export default function App() {
           <MembersPage />
         ) : currentPage === 'events' ? (
           <EventsPage />
+        ) : currentPage === 'about' ? (
+          <AboutPage />
+        ) : currentPage === 'contact' ? (
+          <ContactPage />
         ) : null}
       </main>
       <Footer />

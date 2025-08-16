@@ -35,17 +35,18 @@ export function Navigation({ currentPage, onPageChange }) {
               </Button>
               <Button 
                 variant="ghost" 
-                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'members' ? 'bg-primary/10' : ''}`}
-                onClick={() => onPageChange('members')}
-              >
-                Members
-              </Button>
-              <Button 
-                variant="ghost" 
                 className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'events' ? 'bg-primary/10' : ''}`}
                 onClick={() => onPageChange('events')}
               >
                 Upcoming Events
+              </Button>
+              
+              <Button 
+                variant="ghost" 
+                className={`text-foreground hover:text-primary hover:bg-primary/10 ${currentPage === 'members' ? 'bg-primary/10' : ''}`}
+                onClick={() => onPageChange('members')}
+              >
+                Members
               </Button>
               <Button 
                 variant="ghost" 

@@ -28,7 +28,7 @@ export function EventsPage() {
               <Calendar className="w-4 h-4 mr-2" />
               Upcoming Events
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent font-poppins">
               Join Our Events
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
